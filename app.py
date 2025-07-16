@@ -1,12 +1,16 @@
 from flask import Flask, render_template, request
 import numpy as np
-import pickle
+from xgboost import XGBRegressor
 
 app = Flask(__name__)
 
-# Load the trained model
-with open('model.pkl', 'rb') as file:
-    model = pickle.load(file)
+
+
+model = XGBRegressor(
+    tree_method='gpu_hist',
+    gpu_id=0
+)
+model.load_model("model.json")
 
 @app.route('/')
 def index():
