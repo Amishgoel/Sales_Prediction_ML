@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: Sales_Prediction_ML
-    env: python
-    buildCommand: |
-      pip install --upgrade pip setuptools wheel
-      pip install --prefer-binary -r requirements.txt
-    startCommand: python app.py
-    pythonVersion: 3.11
