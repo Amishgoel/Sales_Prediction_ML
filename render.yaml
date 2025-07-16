@@ -6,4 +6,4 @@ services:
       pip install --upgrade pip setuptools wheel
       pip install --prefer-binary -r requirements.txt
     startCommand: python3 app.py
-    pythonVersion: 3.10.12
+    pythonVersion: 3.11
