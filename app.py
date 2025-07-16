@@ -7,8 +7,7 @@ app = Flask(__name__)
 
 
 model = XGBRegressor(
-    tree_method='gpu_hist',
-    gpu_id=0
+    tree_method='hist'
 )
 model.load_model("model.json")
 
